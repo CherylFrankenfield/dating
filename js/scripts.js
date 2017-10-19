@@ -1,33 +1,26 @@
-$(document).ready(function() {
-  $("form#form").change(function(event) {
-    var answerOne = parseInt(select("#beverage")).val();
-    var answerTwo = parseInt(select("#animal")).val();
-    var answerThree = parseInt(select("#boyfriend")).val();
-    var total = answerOne + answerTwo + answerThree;
-      return total;
+var total = function (answerOne, answerTwo, answerThree) {
+  return answerOne + answerTwo + answerThree;
+};
 
-    if (total === 3) {
+$(document).ready(function() {
+  $("form#form").submit(function(event) {
+    event.preventDefault();
+    var answerOne = parseInt($("#beverage").val());
+    var answerTwo = parseInt($("#animal").val());
+    var answerThree = parseInt($("#boyfriend").val());
+    //alert(total(answerOne, answerTwo, answerThree));
+
+    if (total value === 3) {
       $("#celebrity1").show();
-    }
-    else if (total === 4) {
+
+    } else if (total value === 4) {
       $("#celebrity2").show();
-    }
-    else if (total === 5) {
+
+    } else if (total value === 5) {
       $("#celebrity3").show();
     }
-    else  {
+    else {
       $("#celebrity4").show();
     }
-
-    // if (outputAnimal === 'turtle')  {
-    //   $('#turtle').show();
-    //   $('#snake','#otter').hide();
-    // } else if (outputAnimal === 'snake') {
-    //   $('#snake').show();
-    // }
-    // else {
-    //   $('#otter').show();
-    //
   });
-
 });
