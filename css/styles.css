@@ -1,3 +1,7 @@
 form {
   margin-top: 20px;
 }
+
+#celebrity1, #celebrity2, #celebrity3, #celebrity4 {
+  display: none;
+}
