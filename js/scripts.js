@@ -1,22 +1,28 @@
-var total = function (answerOne, answerTwo, answerThree) {
-  return answerOne + answerTwo + answerThree;
+var total = function (_answerOne, _answerTwo, _answerThree) {
+  return _answerOne + _answerTwo + _answerThree;
 };
 
 $(document).ready(function() {
+
+
   $("form#form").submit(function(event) {
     event.preventDefault();
     var answerOne = parseInt($("#beverage").val());
     var answerTwo = parseInt($("#animal").val());
     var answerThree = parseInt($("#boyfriend").val());
-    //alert(total(answerOne, answerTwo, answerThree));
+    //var realtotal = parseInt("total");
 
-    if (total value === 3) {
+    var realtotal = total(answerOne, answerTwo, answerThree);
+
+
+    if (realtotal === 3) {
+      alert("Congrats!");
       $("#celebrity1").show();
 
-    } else if (total value === 4) {
+    } else if (realtotal === 4) {
       $("#celebrity2").show();
 
-    } else if (total value === 5) {
+    } else if (realtotal === 5) {
       $("#celebrity3").show();
     }
     else {
